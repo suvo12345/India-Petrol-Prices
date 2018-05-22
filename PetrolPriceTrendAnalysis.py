@@ -89,7 +89,8 @@ finalpricechange = pd.DataFrame(meanpercentchangeprice_Delhi.sort_values(by=['Ye
 # Plot the Delhi price changes over months
 # Range: June, 2002 - May, 2018
 #
-finalpricechange.Delhi.plot(kind='line')
+g = finalpricechange.Delhi.plot(kind='line')
+g.set_xticklabels(g.get_xticklabels(),rotation='vertical')
 
 #g = sns.barplot(finalpricechange.MonthYear, finalpricechange.Delhi)
 
